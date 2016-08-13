@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+div{width:0;height:720px;float:left;background-image:url(images/zyh.jpg);background-repeat:no-repeat;position:absolute;}
+</style>
+</head>
+
+<body>
+
+</body>
+</html>
+<script type="text/javascript">
+	var _timer=null;
+	var _list=null;
+	function createDiv(){
+		var _div="";
+		for(var i=0;i<10;i++){
+			_div=_div+"<div></div>"
+			
+		}
+	
+		document.getElementsByTagName("body")[0].innerHTML=_div;
+		_list=document.getElementsByTagName("div");
+		for(var n=0;n<10;n++){
+			_list[n].style.left=n*128+"px";
+			_list[n].style.backgroundPosition=(-(n*128))+"px"+" 0px";	
+		}
+		player();
+	}
+	createDiv();
+	var _timer=null;
+	var _width=0;	
+	function player(){
+		_width+=5;
+		for(var i=0;i<10;i++){
+			_list[i].style.width=_width+"px"
+		}		
+		if(_width>=128){
+		window.clearTimeout(_timer);
+		return;
+		}
+		
+		_timer=window.setTimeout(player,30);	
+	}
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
